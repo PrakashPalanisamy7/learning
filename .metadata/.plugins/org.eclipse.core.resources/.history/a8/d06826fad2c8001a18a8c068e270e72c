@@ -1,0 +1,20 @@
+package practical;
+
+public class Student {
+	private String name;
+	private String SSN;
+	private String email;
+	
+	public Student(String name, String SSN)
+	{
+		this.name=name;
+		this.SSN=SSN;
+		setEmail();
+	}
+	private void setEmail()
+	{
+		email=name+"@school.com";
+		System.out.println("Your email is:"+email);
+		
+	}
+}

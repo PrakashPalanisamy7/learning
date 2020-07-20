@@ -1,0 +1,57 @@
+package practical;
+
+public class Student {
+	private static int id=200;
+	private String userId;
+	private String name;
+	private String SSN;
+	private String email;
+	private String courses="";
+	private static final int cost=1200;
+	private int balance;
+	
+	public Student(String name, String SSN)
+	{
+		id++;
+		this.name=name;
+		this.SSN=SSN;
+		setEmail();
+		setUserId();
+	}
+	private void setUserId() {
+		int max=9000;
+		int min=1000;
+	    int random= (int) (Math.random() * 10000)* (max-min);
+	    random=random+min;
+		userId=id+""+random+""+SSN.substring(SSN.length()-4);	
+		System.out.println("Your user id is:"+userId);
+	}
+	
+	private void setEmail()
+	{
+		email=name.toLowerCase()+"@school.com";
+		System.out.println("Your email is:"+email);
+		
+	}
+	public void enroll(String course)
+	{
+		this.courses=this.courses+"\n"+course;
+		balance=balance+cost;
+	}
+	public void pay()
+	{
+		
+	}
+	public void checkbalance()
+	{
+		System.out.println("Balance is :"+balance);
+	}
+	public String toString()
+	{
+	return null ;	
+	}
+	public void showCourses()
+	{
+		System.out.println(courses);
+	}
+}

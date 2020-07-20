@@ -1,0 +1,13 @@
+package practical;
+
+public class Student {
+	private String name;
+	private String SSN;
+	
+	public Student(String name, String SSN)
+	{
+		
+	}
+
+
+}

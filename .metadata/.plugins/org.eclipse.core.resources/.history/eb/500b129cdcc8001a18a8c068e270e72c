@@ -1,0 +1,22 @@
+package practical;
+
+public class studentDatabase {
+
+	public static void main(String[] args) {
+	
+		Student stu1= new Student("Prakash","12345678");
+		Student stu2= new Student("Selvam","87654321");
+		Student stu3= new Student("Mary","18786835");
+		
+		stu1.enroll("Eng121");
+		stu1.enroll("Math121");
+		
+		stu1.checkbalance();
+		stu1.showCourses();
+		stu1.pay(750);
+		stu1.checkbalance();
+		System.out.println(stu1.toString());
+
+	}
+
+}

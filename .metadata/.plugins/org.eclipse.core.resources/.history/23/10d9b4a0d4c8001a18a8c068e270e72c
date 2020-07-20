@@ -1,0 +1,30 @@
+package practical;
+
+public class Student {
+	private static int id=200;
+	private String userId;
+	private String name;
+	private String SSN;
+	private String email;
+	
+	public Student(String name, String SSN)
+	{
+		id++;
+		this.name=name;
+		this.SSN=SSN;
+		setEmail();
+		setUserId();
+	}
+	private void setUserId() {
+	    double random= Math.random();
+		userId=id+""+random+""+SSN.substring(SSN.length()-4);	
+		System.out.println("Your user id is:"+userId);
+	}
+	
+	private void setEmail()
+	{
+		email=name.toLowerCase()+"@school.com";
+		System.out.println("Your email is:"+email);
+		
+	}
+}
